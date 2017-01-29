@@ -67,7 +67,7 @@
 				<div class="informative-text">
 					<div>
 						<h2> Cumpără! </h2>
-						<p> Nu mai bate drumul până la magazin. Dai un click și te ducem direct la haina căutat. Cumpărăturile de haine nu au fost niciodată mai simple!</p>
+						<p> Nu mai bate drumul până la magazin. Dai un click și te ducem direct la haina căutată. Cumpărăturile de haine nu au fost niciodată mai simple!</p>
 				 	</div>
 				 	<img src="./img/3.png">
 				</div>

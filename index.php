@@ -20,8 +20,9 @@
 					<img class="main-logo" src="./img/logo_negru.png" >
 					<p style="text-align: center"> Genereaza inteligent outfituri pentru bărbați și femei!</p>
 					<p style="text-align: center"> Vei avea acces la mii de combinații de la magazinele tale preferate. </p>
-					<form class="subscribe-form">
-						<input type="email">
+					<form id="subscribe_form" class="subscribe-form" method="post">
+						<input type="hidden" name="subscribe">
+						<input name="email" type="email">
 						<button type="submit">Abonează-te</button>
 					</form>
 				</div>
@@ -79,12 +80,12 @@
 			<div class="col-md-6 col-sm-12">
 				<div class="contact-form-wrapper">
 					<h1 class="contact-form-header" style="text-align: center">Contact Form</h1>
-					<form class="contact-form">
+					<form id = "contact_form" class="contact-form">
 						<label for="name">Nume : </label>
 						<input id="name" name="name" type="text">
 						<br><br>
-						<label for="email" >Email : </label>
-						<input type="email" id="email" name="email">
+						<label for="email2" >Email : </label>
+						<input type="email" id="email2" name="email2">
 						<br><br>
 						<label for="content" style="vertical-align: middle">Mesaj : </label>
 						<textarea type="text" id="content" name="content" rows="10"></textarea>
@@ -116,5 +117,61 @@
 
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+
+	    $('#subscribe_form').submit(function(event) {
+	        var formData = {
+	            'email'        : $('input[name=email]').val(),
+	            'subscribe'    : $('input[name=subscribe]').val()
+	        };
+
+	        $.ajax({
+	            type        : 'POST', 
+	            url         : 'subscribe.php', 
+	            data        : formData
+	        })
+	            .done(function(data) {
+	                console.log(data); 
+	                if (data != 'Great job!')
+	                	alert("There was a problem with your subscription!");
+	                else
+	                	alert("You have succesfully to Clover!");
+	            });
+	        event.preventDefault();
+	    });
+
+	});
+
+
+	$(document).ready(function() {
+
+	    $('#contact_form').submit(function(event) {
+	        var formData = {
+	            'email'		: $('input[name=email2]').val(),
+	            'name'    	: $('input[name=name]').val(),
+	            'content'   : $('textarea[name=content]').val()
+	        };
+
+	        $.ajax({
+	            type        : 'POST', 
+	            url         : 'subscribe.php', 
+	            data        : formData
+	        })
+	            .done(function(data) {
+	                console.log(data); 
+	                if (data != 'Great job!')
+	                	alert("There was a problem sending your message!");
+	                else
+	                	alert("Thank you for your message!");
+	            });
+	        event.preventDefault();
+	    });
+
+	});
+
+	</script>
 </body>
 </html>

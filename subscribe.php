@@ -31,7 +31,7 @@ if(isset($_POST['subscribe']))
 else
 {
 	// contact
-	$to      = 'contact@clover.com';
+	$to      = 'contact@werit.ro';
 	$subject = $_POST['name'] . ' contacted us';
 	$message = $_POST['content'];
 	$headers = 'From: ' . $_POST['email'] . "\r\n" .

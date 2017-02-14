@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Clover - Îmbracă-te inteligent</title>
+	<title>Werit - Îmbracă-te inteligent</title>
 	<link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
   	<meta charset="UTF-8">
 
@@ -101,7 +101,7 @@
 					<iframe src="https://www.google.com/maps/
 					embed?pb=!1m14!1m12!1m3!1d86818.84040667994!2d27.51693045786506!3d47.15611595590017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sro!2sro!4v1483638812394" width="300" height="225" frameborder="0" style="margin-left:10%; width:80%;"></iframe>
 					<br><br>
-					<p style="text-align: center">Email : contact@clover.ro</p>
+					<p style="text-align: center">Email : contact@werit.ro</p>
 					<p style="text-align: center"><a href="#"><i class="fa fa-facebook-official" ></i> Facebook</a></p>
 					</div>
 				</div>
@@ -138,7 +138,7 @@
 	                if (data != 'Great job!')
 	                	alert("There was a problem with your subscription!");
 	                else
-	                	alert("You have succesfully to Clover!");
+	                	alert("You have succesfully subscribed to Werit!");
 	            });
 	        event.preventDefault();
 	    });

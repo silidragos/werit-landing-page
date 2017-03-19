@@ -18,8 +18,13 @@ h3{
 	font-size: 36px;
 	margin-bottom: 60px;
 }
+
+a:hover{
+	cursor:pointer;
+}
 .on-image-but{
 	color: white;
+	display: inline-block;
 	font-size:26px;
 	background: none;
 	border:3px solid white;
@@ -31,6 +36,9 @@ h3{
 
 .on-image-but:hover{
 	opacity:.7;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
 }
 .navbar-default{
 	border: none;
@@ -91,13 +99,13 @@ h3{
 #main-title{
 	background: url("../img/5.jpg") no-repeat center fixed;
 	background-size: cover;
-	height: 600px;
+	height: 800px;
 	margin-top: -5px;
 }
 #main-title .left-text{
 	background-color: rgba(222,184,135,0.9);
 	position: absolute;
-	top:250px;
+	top:350px;
 	padding-left: 25px;
 	font-weight: bolder;
 	width: 50%;
@@ -115,6 +123,40 @@ h3{
 	color: white;
 }
 
+.contact-form-wrapper{
+	position:relative;
+	width:80%;
+	margin:auto;
+}
+
+.form-control:focus{
+	border-color: rgb(222,184,135);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(222,184,135,.6);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(222,184,135,.6);
+}
+
+#contact_form button{
+	float:right;
+}
+
+@media(max-width: 768px){
+	#main-title{
+		background: url("../img/main-img-sm.png") no-repeat center fixed;
+	}
+	.main-logo{
+		width:20%;
+		margin: auto;
+	}
+	#main-title .left-text{
+		width:75%;
+	}
+	#contact_form button{
+		width:100%;
+	}
+	.my_icon{
+		width:60px;
+	}
+}
 @media(min-width: 768px){
 	#demo-button, #contact-button{
 		transition: background-color .2s ease-in;
@@ -127,4 +169,39 @@ h3{
 	#demo-button:hover>a, #contact-button:hover>a{
 		color: white;
 	}
+}
+
+@media(min-width: 1300px){
+
+	#contact_form{
+		margin: auto;
+		width:60%;
+	}
+}
+
+.jiggle {
+    -webkit-animation: jiggle 0.2s infinite;
+    -moz-animation-duration: 0.2s;
+    -moz-animation-name: jiggle;
+    -moz-animation-iteration-count: infinite;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+}
+
+@-moz-keyframes jiggle {
+    0% {
+        -moz-transform: rotate(-1deg);
+    }
+    50% {
+        -moz-transform: rotate(1deg);
+    }
+}
+
+@-webkit-keyframes jiggle {
+    0% {
+        -webkit-transform: rotate(-1deg);
+        }
+    50% {
+        -webkit-transform: rotate(1deg);
+    }
 }

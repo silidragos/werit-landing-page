@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+	/*font-family: 'Cormorant Garamond', serif;*/
+	font-family: 'Montserrat', sans-serif;
+}
+
+p{
+	font-size: 20px;
+}
+
+section{
+	margin-top: 120px;
+}
+h3{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 36px;
+	margin-bottom: 60px;
+}
+.on-image-but{
+	color: white;
+	font-size:26px;
+	background: none;
+	border:3px solid white;
+	padding: 5px 15px;
+	margin-bottom: 20px;
+
+	transition: opacity .2s ease-in-out;
+}
+
+.on-image-but:hover{
+	opacity:.7;
+}
+.navbar-default{
+	border: none;
+}
+
+.navbar-default .navbar-nav>li{
+		border: 1px solid gray;
+		margin: 10px 10px;
+}
+
+.main-logo{
+	width:90px;
+	padding: 5px 0px;
+}
+
+.container-fluid{
+	background-color: white;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+
+	border-bottom: 1px lightgray solid;
+}
+#demo-button{
+	display: none;
+}
+
+.nav-buttons li{
+	font-size: 20px;
+	margin: 15px 0px;
+}
+
+.navbar-right{
+	padding-right: 10px;
+}
+
+
+.made-in{
+	margin-bottom:10px;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+.icon-inima{
+	color:dimgray;
+	transition:color .3s;
+}
+
+.icon-inima:hover{
+	color:red;
+}
+
+.transitional-section{
+
+}
+
+#main-title{
+	background: url("../img/5.jpg") no-repeat center fixed;
+	background-size: cover;
+	height: 600px;
+	margin-top: -5px;
+}
+#main-title .left-text{
+	background-color: rgba(222,184,135,0.9);
+	position: absolute;
+	top:250px;
+	padding-left: 25px;
+	font-weight: bolder;
+	width: 50%;
+}
+
+#main-title .statement{
+	font-weight: lighter;
+	font-size: 36px;
+	color: white;
+	letter-spacing: .2em;
+}
+#main-title .substatement{
+	font-weight: lighter;
+	font-size: 18px;
+	color: white;
+}
+
+@media(min-width: 768px){
+	#demo-button, #contact-button{
+		transition: background-color .2s ease-in;
+	}
+
+	#demo-button:hover, #contact-button:hover{
+		background-color: dimgray;
+		color:white;
+	}
+	#demo-button:hover>a, #contact-button:hover>a{
+		color: white;
+	}
+}

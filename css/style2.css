@@ -33,7 +33,23 @@ a:hover{
 
 	transition: opacity .2s ease-in-out;
 }
-
+.subscribe-input{
+	min-width:40%;
+	background:none;
+	border: none;
+	border-bottom: 3px solid white;
+	transition: opacity .2s ease-in-out;
+	color:white;
+	font-size:18px;
+	margin-right: 10px;
+}
+.subscribe-input::-webkit-input-placeholder{
+	color:#EEE;
+}
+.subscribe-input:focus{
+	outline:none;
+	opacity: 0.8;
+}
 .on-image-but:hover{
 	opacity:.7;
 	color: white;

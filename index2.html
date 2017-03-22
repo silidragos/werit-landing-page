@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Werit - Dress Smart!</title>
-	<link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
-  	<meta charset="UTF-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-  <link rel="stylesheet" href="./css/aos.css" />
-  <link rel="stylesheet" type="text/css" href="./css/style2.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/aos.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style2.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
 </head>
-<body>
 
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#"><img class="main-logo" src="./img/logo_negru.png" ></a>
-	    </div>
-	    <ul class="nav navbar-nav navbar-right nav-buttons">
-	      <li><a href="https://www.facebook.com/weritro/"><i class="fa fa-facebook"></i></a></li>
-	      <li id="contact-button"><a class="scroll-to-contact "><span class="glyphicon glyphicon-send"></span> Contact us</a></li>
-	      <li id="demo-button"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Demo</a></li>
-	    </ul>
-	  </div>
-	</nav>
+<body>
+	<header class="werit-header">
+		<img class="werit-header__logo" src="./img/logo_negru.png"></img>
+		<div class="werit-header__actions">
+			<a class="header-action" href="https://www.facebook.com/weritro/"><i class="fa fa-facebook"></i></a>
+			<a class="header-action scroll-to-contact "><span class="glyphicon glyphicon-send"></span> Contact us</a>
+			<!--<a class="header-action" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Demo</a>-->
+		</div>
+	</header>
 
 	<section id="main-title">
 		<div class="left-text" data-aos="fade-right" data-aos-duration="1500">
@@ -36,74 +33,102 @@
 		</div>
 	</section>
 
-	<section data-aos="fade-up" id="mission">
-		<div class="row">
-			<div class="col-md-6" style="margin-top:150px">
-				<h3> <strong> Our Mission </strong></h3>
-				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariator. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-			<div class="col-md-6" data-aos="fade-left">
-				<img style="width:100%" src="./img/mock.png"/>
-			</div>
+	<section class="werit-mission" data-aos="fade-up" id="mission">
+		<div class="werit-mission__text">
+			<h3 class="mission-header"> Our Mission </h3>
+			<p style="text-align: justify; margin-left: 30px;">
+
+				We believe that dressing well is hugely important in today's society. Fashion is everywhere around us but fashionable advice
+				is hard to come by. We are going to change this by building a smart online fashion advisor. By combining clothes from
+				your favorite retailers with some brainy algorithms, we make sure that your wishes for clothing transform into a truly
+				great outfit.
+
+			</p>
+		</div>
+		<div class="werit-mission__image" data-aos="fade-left">
+			<img src="./img/mock.png" />
 		</div>
 	</section>
 
-			<hr>
+	<hr>
 
 	<section data-aos="fade-up" id="Features">
-		<h3> <strong> Beautifuly Simple </strong></h3>
-		<p> doar un screenshot de pe alt site--->TO BE Changed </p>
-		<img style="width:80%; margin: auto; display: block"  src="./img/example.png"/>
+		<h3>Beautifuly Simple </h3>
+		<div class="werit-architecture-wrapper">
+			<div class="werit-architecture" style="text-align: center;">
+				<div class="werit-architecture__infograph">
+					<img class="infograph__image" src="img/infograph.png" />
+					<p class="infograph__text"> This is some random text. Hello Dragos Silion :* </p>
+				</div>
+				<div class="werit-architecture__path"></div>
+				<div class="werit-architecture__content">
+					<div class="werit-architecture__infograph infograph-left" data-aos="fade-left">
+						<img class="infograph__image" src="img/infograph.png" />
+						<p class="infograph__text"> This is some random text. Hello Dragos Silion :* </p>
+						<div class="werit-architecture__path"></div>
+					</div>
+					<div class="werit-architecture__infograph infograph-right" data-aos="fade-right">
+						<div class="werit-architecture__path"></div>
+						<img class="infograph__image" src="img/infograph.png" />
+						<p class="infograph__text"> This is some random text. Hello Dragos Silion :* </p>
+					</div>
+					<div class="werit-architecture__infograph">
+						<img class="infograph__image" src="https://cdn2.iconfinder.com/data/icons/4web-3/139/cart-128.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<img style="width:80%; margin: auto; display: block"  src="./img/example.png"/>-->
 	</section>
 
 	<hr>
 	<section>
-			<div class="contact-form-wrapper">
-				<h1 class="contact-form-header" style="text-align: center">Contact us at <span style="color:#81d4ef; font-weight: bold">team@werit.ro</span>!</h1>
-				<img class="my_icon" data-aos="flip-right" data-aos-duration="1500" src="./img/firework.png" style="position:absolute; right:0; top:-100px"/>
-				<form id = "contact_form" class="contact-form">
-					<div class="form-group">
-						<label for="name">Nume : </label>
-						<input class="form-control" id="name" name="name" type="text"/>
-					</div>
-					<div class="form-group">
-						<label for="email2" >Email : </label>
-						<input class="form-control" type="email" id="email2" name="email2">
-					</div>
-					<div class="form-group">
-						<label for="content" style="vertical-align: middle">Mesaj : </label>
-						<textarea class="form-control" type="text" id="content" name="content" rows="10"></textarea>
-					</div>
-					<button class="btn btn-default" type="submit">Trimite</button>
-				</form>
-			</div>
+		<div class="contact-form-wrapper">
+			<h1 class="contact-form-header" style="text-align: center">Contact us at <span style="color:#81d4ef; font-weight: bold">team@werit.ro</span>!</h1>
+			<img class="my_icon" data-aos="flip-right" data-aos-duration="1500" src="./img/firework.png" style="position:absolute; right:0; top:-100px"
+			/>
+			<form id="contact_form" class="contact-form">
+				<div class="form-group">
+					<label for="name">Nume : </label>
+					<input class="form-control" id="name" name="name" type="text" />
+				</div>
+				<div class="form-group">
+					<label for="email2">Email : </label>
+					<input class="form-control" type="email" id="email2" name="email2">
+				</div>
+				<div class="form-group">
+					<label for="content" style="vertical-align: middle">Mesaj : </label>
+					<textarea class="form-control" type="text" id="content" name="content" rows="10"></textarea>
+				</div>
+				<button class="btn btn-default" type="submit">Trimite</button>
+			</form>
+		</div>
 	</section>
 
-	<section>
-		<hr>
-		<div class="row">
-			<div class="col-md-12"><div class="made-in">Made with <span class="glyphicon glyphicon-heart icon-inima"></span> in Iași</div></div>
-		</div>	</section>
+	<hr>
+	<p class="made-in">Made with <i class="fa fa-heart icon-inima"></i> in Iași</p>
 
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/aos.js"></script>
 
 	<script>
-	    AOS.init();
+		AOS.init();
 
-	$(document).ready(function(){
-	    $(".scroll-to-contact").click(function() {
-		    $('html,body').animate({
-		        scrollTop: $(".contact-form-wrapper").offset().top},
-		        'slow');
-		});
+		$(document).ready(function () {
+			$(".scroll-to-contact").click(function () {
+				$('html,body').animate({
+						scrollTop: $(".contact-form-wrapper").offset().top
+					},
+					'slow');
+			});
 
-		$(".my_icon").click(function(){
-			console.log("<3")
-			$(this).addClass("jiggle");
+			$(".my_icon").click(function () {
+				console.log("<3")
+				$(this).addClass("jiggle");
+			});
 		});
-	});
-	 </script>
+	</script>
 </body>
+
 </html>

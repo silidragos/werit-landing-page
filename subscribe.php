@@ -38,7 +38,7 @@ else
 	$insert->execute();
 	$insert->close();
 
-	echo $_POST['name'];
+	echo "Great job!";
 
 }
 

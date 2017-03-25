@@ -34,7 +34,7 @@
 		<div class="left-text" data-aos="fade-right" data-aos-duration="1500">
 			<p class="statement"> Your very own Fashion Adviser </p>
 			<p class="substatement"> Great outfits with only one press of a button. <br/> If you want us to keep you posted, subscribe now.</p>
-			<input type="email" class="subscribe-input" placeholder="smartly_dressed@werit.ro"> <a class="on-image-but" onClick="swal('Thank you!', 'We\'re glad to meet you!', 'success')">Subscribe to Newsletter! </a>
+			<input type="email" class="subscribe-input" placeholder="smartly_dressed@werit.ro"> <a class="on-image-but">Subscribe to Newsletter! </a>
 			<!-- <a class="on-image-but scroll-to-contact">Contact Us! </a> -->
 		</div>
 	</section>
@@ -101,7 +101,7 @@
 			<h1 class="contact-form-header" style="text-align: center">Contact us at <span style="color:#81d4ef; font-weight: bold">team@werit.ro</span>!</h1>
 			<img class="my_icon" src="./img/firework.png" style="position:absolute; right:0; top:-100px"
 			/>
-			<form id="contact_form" class="contact-form">
+			<form method="post" id="contact_form" class="contact-form">
 				<div class="form-group">
 					<label for="name">Name : </label>
 					<input class="form-control" id="name" name="name" type="text" />
@@ -127,31 +127,60 @@
 	<script src="./js/aos.js"></script>
 	<script src="./js/sweetalert.min.js"></script>
 
-	<script>
-		AOS.init();
 
-		$(document).ready(function () {
-			$(".scroll-to-contact").click(function () {
-				$('html,body').animate({
-						scrollTop: $(".contact-form-wrapper").offset().top
-					},
-					'slow');
-			});
+	<script type="text/javascript">
 
-			$(".my_icon").click(function () {
-				console.log("<3")
-				$(this).addClass("jiggle");
-			});
-		});
-	</script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	$(document).ready(function() {
+        console.log("Subscribe")
+	    $('#subscribe_form').submit(function(event) {
+	        var formData = {
+	            'email'        : $('input[name=email]').val(),
+	            'subscribe'    : $('input[name=subscribe]').val()
+	        };
 
-	  ga('create', 'UA-96096471-1', 'auto');
-	  ga('send', 'pageview');
+	        $.ajax({
+	            type        : 'POST', 
+	            url         : 'subscribe.php', 
+	            data        : formData
+	        })
+	            .done(function(data) {
+	                console.log(data); 
+	                if (data != 'Great job!')
+	                	alert("There was a problem with your subscription!");
+	                else
+	                	swal('Thank you!', 'We\'re glad to meet you!', 'success');
+	            });
+	        event.preventDefault();
+	    });
+
+	});
+
+
+	$(document).ready(function() {
+        console.log("Contact")
+	    $('#contact_form').submit(function(event) {
+	        var formData = {
+	            'email'		: $('input[name=email2]').val(),
+	            'name'    	: $('input[name=name]').val(),
+	            'content'   : $('textarea[name=content]').val()
+	        };
+
+	        $.ajax({
+	            type        : 'POST', 
+	            url         : 'subscribe.php', 
+	            data        : formData
+	        })
+	            .done(function(data) {
+	                console.log(data); 
+	                if (data != 'Great job!')
+	                	alert("There was a problem sending your message!");
+	                else
+	                	swal('Thank you!', 'Thank you for your message!', 'success');
+	            });
+	        event.preventDefault();
+	    });
+
+	});
 
 	</script>
 </body>

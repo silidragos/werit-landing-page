@@ -1,10 +1,12 @@
 <?php
 
 define("ADDRESS", "127.0.0.1");
-define("USER", "root");
-define("PASSWORD", "");
-define("DATABASE", "clover");
+define("USER", "werit");
+define("PASSWORD", "kqc14xawe");
+define("DATABASE", "werit_clover");
 define("TABEL", "subscribers");
+define("TABEL2", "messages");
+
 
 
 if(isset($_POST['subscribe']))
@@ -30,18 +32,14 @@ if(isset($_POST['subscribe']))
 }
 else
 {
-	// contact
-	$to      = 'contact@werit.ro';
-	$subject = $_POST['name'] . ' contacted us';
-	$message = $_POST['content'];
-	$headers = 'From: ' . $_POST['email'] . "\r\n" .
-    'Reply-To: '. $_POST['email'] . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+	$connection = mysqli_connect(ADDRESS, USER, PASSWORD, DATABASE);
+	$insert = $connection->prepare("INSERT INTO " . TABEL2 . " (name, email, message) VALUES (?, ?, ?)");
+	$insert->bind_param('sss', $_POST['name'], $_POST['email'], $_POST['content']);
+	$insert->execute();
+	$insert->close();
 
-	// if(mail($to, $subject, $message, $headers))
-	// 	echo "Great job!";
-	// else
-	// 	echo "There was a problem!";
+	echo $_POST['name'];
+
 }
 
 ?>
